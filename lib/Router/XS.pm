@@ -47,14 +47,6 @@ sub any ($&) {
   add_route("*/$_[0]", $_[1]);
 }
 
-sub route ($) {
-  my ($sub, @args) = check_route(join '/', $_[0]->request->path, $_[0]->request->method);
-  if ($sub) {
-    return $sub->($_[0], @args);
-  }
-  return undef;
-}
-
 1;
 
 =encoding utf8
