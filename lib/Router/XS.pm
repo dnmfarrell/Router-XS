@@ -6,7 +6,7 @@ my @REST = qw(get post put patch del head conn options any);
 our @EXPORT_OK = (@STD, @REST);
 our %EXPORT_TAGS = (std => \@STD, rest => \@REST, all => [@STD, @REST]);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 require XSLoader;
 XSLoader::load();
